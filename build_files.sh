@@ -1,4 +1,4 @@
-```sh
+sh
 #!/usr/bin/env bash
 
 echo “Migrando banco de dados…”
