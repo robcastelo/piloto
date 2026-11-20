@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "{views.py}/wsgi.py",
+      "src": "{piloto}/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
@@ -24,7 +24,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "{views.py}/wsgi.py"
+      "dest": "{piloto}/wsgi.py"
     }
   ]
 }
