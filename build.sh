@@ -1,8 +1,13 @@
-#!/usr/bin/env bash
 
-echo "Migrando banco de dados..."
-python3 manage.py makemigrations --noinput
-python3 manage.py migrate --noinput
+echo "Starting build script"
 
-echo "Coletando arquivos estáticos..."
-python3 manage.py collectstatic --noinput
+pip install -r requirements.txt
+
+# make migrations
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+# collectstatic
+python3 manage.py collectstatic
+
+echo "Build script completed"
