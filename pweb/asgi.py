@@ -13,4 +13,6 @@ from django.core.asgi import get_asgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pweb.settings')
 
-application = get_asgi_application()
+django_asgi_application = get_asgi_application()
+
+  
