@@ -1,4 +1,13 @@
-# build_files.sh
+# build.sh
+echo "Starting build script"
 
 pip install -r requirements.txt
-python3.x manage.py collectstatic --no-input --clear
+
+# make migrations
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+# collectstatic
+python3 manage.py collectstatic
+
+echo "Build script completed"
