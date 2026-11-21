@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['vercel.app']
 
 
 # Application definition
@@ -57,7 +57,7 @@ MIDDLEWARE = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 ROOT_URLCONF = 'pweb.urls'
 
