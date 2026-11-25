@@ -9,7 +9,7 @@ menu = """
     <a href="/sobre/">Sobre</a> |
     <a href="/contato/">Contato</a> |
     <a href="/ajuda/">Ajuda</a> |
-    <a href="/perfil/">Perfil</a> |
+    <a href="/exibir_item/">Item</a> |
     <a href="/dia_semana/">Dia da semana</a>
 </nav>
 """
