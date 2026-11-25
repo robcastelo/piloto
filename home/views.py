@@ -1,12 +1,15 @@
 
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
+from django.views.decorators.http import require_GET
 
 menu = """
 <nav>
     <a href="/">Principal</a> |
     <a href="/sobre/">Sobre</a> |
     <a href="/contato/">Contato</a> |
-    <a href="/ajuda/">Ajuda</a>
+    <a href="/ajuda/">Ajuda</a> |
+    <a href="{% url 'perfil' %}">Perfil</a> |
+    <a href="{% url 'dia_semana' %}">Dia da semana</a>
 </nav>
 """
 
