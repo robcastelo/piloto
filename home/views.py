@@ -9,8 +9,8 @@ menu = """
     <a href="/sobre/">Sobre</a> |
     <a href="/contato/">Contato</a> |
     <a href="/ajuda/">Ajuda</a> |
-    <a href="{% url 'perfil' %}">Perfil</a> |
-    <a href="{% url 'dia_semana' %}">Dia da semana</a>
+    <a href="/perfil/">Perfil</a> |
+    <a href="/dia_semana/">Dia da semana</a>
 </nav>
 """
 
