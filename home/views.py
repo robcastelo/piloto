@@ -26,14 +26,11 @@ def contato(request):
 def ajuda(request):
     return HttpResponse(menu + "<h1>Ajuda</h1><p>Esta é a página de ajuda.</p>")
 
-@require_GET
-def perfil(request, usuario):
-    # Simulando dados de um banco de dados
-    dados_perfil = {
-        "usuario": usuario,        
-    }
-    return JsonResponse(dados_perfil)
-
+#@require_GET
+def exibir_item(request, id):
+    return render(request, exibir_item.html,{id:id})
+    
+    
 def dia_semana(request, numero):
     # Dicionário mapeando o número para o dia da semana
     dias = {
