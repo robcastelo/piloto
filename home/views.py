@@ -25,8 +25,13 @@ def contato(request):
 def ajuda(request):
     return HttpResponse(menu + "<h1>Ajuda</h1><p>Esta é a página de ajuda.</p>")
 
+@require_GET
 def perfil(request, usuario):
-    return HttpResponse(f"Perfil do usuário: {usuario}")
+    # Simulando dados de um banco de dados
+    dados_perfil = {
+        "usuario": usuario,        
+    }
+    return JsonResponse(dados_perfil)
 
 def dia_semana(request, numero):
     # Dicionário mapeando o número para o dia da semana
