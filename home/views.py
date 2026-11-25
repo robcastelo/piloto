@@ -1,6 +1,7 @@
 
 from django.http import HttpResponse, Http404
 from django.views.decorators.http import require_GET
+from django.http import JsonResponse
 
 menu = """
 <nav>
