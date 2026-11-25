@@ -1,7 +1,46 @@
+
 {% extends 'base.html' %}
 
 {% block conteudo %}
-
-<h1>Dia da semana</h1>
+    <title>Dia da Semana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .dia {
+            font-size: 28px;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .numero {
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>📅 Dia da Semana</h1>
+        <p class="numero">Número {{ numero }}</p>
+        <p class="dia">{{ dia }}</p>
+    </div>
+</body>
+</html>
 
 {% endblock %}
