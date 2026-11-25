@@ -21,3 +21,24 @@ def contato(request):
 
 def ajuda(request):
     return HttpResponse(menu + "<h1>Ajuda</h1><p>Esta é a página de ajuda.</p>")
+
+def perfil(request, usuario):
+    return HttpResponse(f"Perfil do usuário: {usuario}")
+
+def dia_semana(request, numero):
+    # Dicionário mapeando o número para o dia da semana
+    dias = {
+        1: "Segunda-feira",
+        2: "Terça-feira",
+        3: "Quarta-feira",
+        4: "Quinta-feira",
+        5: "Sexta-feira",
+        6: "Sábado",
+        7: "Domingo"
+    }
+    
+    # Validação do parâmetro
+    if numero not in dias:
+        raise Http404("Número inválido. Use um inteiro de 1 a 7.")
+        
+    return HttpResponse(f"{dias[numero]}")
