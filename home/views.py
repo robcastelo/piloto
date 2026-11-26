@@ -28,7 +28,7 @@ def ajuda(request):
 
 #@require_GET
 def exibir_item(request, id):
-    return render(request, exibir_item.html,{id:id})
+    return render(request, exibir_item.html,{'id': id})
     
     
 def dia_semana(request, numero):
